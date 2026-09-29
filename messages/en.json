@@ -12,7 +12,10 @@
     "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
-    "support": "Support"
+    "support": "Support",
+    "openDashboard": "Open Dashboard",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Hero": {
     "title": "The new era of <highlight>education</highlight>",

@@ -2,35 +2,45 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/app/navigation'
 import LocaleSwitcher from './LocaleSwitcher'
+import MobileMenu, { type NavHref } from './MobileMenu'
 
-const items = [
+const items: { key: 'home' | 'features' | 'pricing' | 'support'; href: NavHref }[] = [
 	{ key: 'home', href: '/' },
 	{ key: 'features', href: '/features' },
 	{ key: 'pricing', href: '/pricing' },
 	{ key: 'support', href: '/support' },
-] as const
+]
 
 const Navbar = () => {
 	const t = useTranslations('Navbar')
+	const links = items.map(({ key, href }) => ({ href, label: t(key) }))
 
 	return (
-		<header className="fixed top-0 left-0 right-0 z-10 w-full">
+		<header className="fixed inset-x-0 top-0 z-30 w-full bg-background/80 pt-[env(safe-area-inset-top)] backdrop-blur-md lg:bg-transparent lg:backdrop-blur-none">
 			<nav
 				aria-label={t('label')}
-				className="flex items-center justify-between px-8 py-4"
+				className="flex items-center justify-between gap-4 py-3 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pl-[max(2rem,env(safe-area-inset-left))] sm:pr-[max(2rem,env(safe-area-inset-right))] lg:py-4"
 			>
-				<Link href="/" aria-label={t('logoLabel')}>
-					<Image src="/logo_nav.png" alt="" width={150} height={51} priority />
+				<Link href="/" aria-label={t('logoLabel')} className="shrink-0">
+					<Image
+						src="/logo_nav.png"
+						alt=""
+						width={150}
+						height={51}
+						priority
+						className="h-auto w-28 sm:w-[150px]"
+					/>
 				</Link>
 
-				<ul className="flex items-center justify-center gap-4">
-					{items.map((item) => (
+				{/* Desktop / large tablet */}
+				<ul className="hidden items-center gap-4 lg:flex">
+					{links.map((item) => (
 						<li key={item.href}>
 							<Link
 								href={item.href}
-								className="text-md font-medium text-gray-700 hover:text-gray-900"
+								className="text-base font-medium text-gray-700 hover:text-gray-900"
 							>
-								{t(item.key)}
+								{item.label}
 							</Link>
 						</li>
 					))}
@@ -38,11 +48,22 @@ const Navbar = () => {
 						<LocaleSwitcher />
 					</li>
 					<li>
-						<Link href="/dashboard" className="text-md font-medium text-background bg-[#4F46E5] px-4 py-2 rounded-full hover:brigthness-[150%] transition duration-200">
-							Open Dashboard
+						<Link
+							href="/dashboard"
+							className="rounded-full bg-primary px-4 py-2 text-base font-medium text-background transition duration-200 hover:brightness-110"
+						>
+							{t('openDashboard')}
 						</Link>
 					</li>
 				</ul>
+
+				{/* Phones, foldables, small tablets */}
+				<MobileMenu
+					items={links}
+					dashboardLabel={t('openDashboard')}
+					openLabel={t('openMenu')}
+					closeLabel={t('closeMenu')}
+				/>
 			</nav>
 		</header>
 	)

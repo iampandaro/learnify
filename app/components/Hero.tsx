@@ -17,7 +17,8 @@ import { Link } from '@/app/navigation'
  *  - Both groups are positioned relative to the button row, so design y = 425
  *    always sits exactly on the row's centre, whatever the text above does.
  *  - Groups scale with `--u` (1 design pixel): 1px on desktop, shrinking
- *    with the viewport down to a floor of 0.45px. Strokes use
+ *    with the viewport down to a floor of 0.4px (0.3px on very narrow screens
+ *    such as flip-phone cover displays). Strokes use
  *    `non-scaling-stroke`, so lines stay 3px thick at every size and always
  *    match the centre line.
  *  - Vertical lines that started at y = 0 in the design are extended far above,
@@ -123,10 +124,10 @@ const Hero = () => {
 	return (
 		<section
 			className="relative isolate overflow-hidden bg-background"
-			style={{ '--u': 'clamp(0.45px, calc(100vw / 1440), 1px)' } as CSSProperties}
+			style={{ '--u': 'min(clamp(0.4px, calc(100vw / 1440), 1px), calc(100vw / 800))' } as CSSProperties}
 		>
-			<div className="flex flex-col items-center gap-5 px-6 pt-28 text-center sm:pt-32 lg:min-h-[230px] lg:pt-[165px]">
-				<h1 className="text-4xl font-medium leading-[1.1] tracking-tight text-black sm:text-6xl lg:text-[72px]">
+			<div className="flex flex-col items-center gap-5 px-4 pt-28 text-center min-[400px]:px-6 sm:pt-32 lg:min-h-[230px] lg:pt-[165px]">
+				<h1 className="text-3xl font-medium leading-[1.1] min-[400px]:text-4xl tracking-tight text-black sm:text-6xl lg:text-[72px]">
 					{t.rich('title', {
 						highlight: (chunks) => (
 							<span className="font-display text-[1.12em] font-extrabold text-primary">
@@ -151,23 +152,23 @@ const Hero = () => {
 				<LinesLeft />
 				<LinesRight />
 
-				<div className="relative z-10 flex h-full items-center justify-center gap-4 sm:gap-[50px]">
+				<div className="relative z-10 flex h-full items-center justify-center gap-2 min-[400px]:gap-4 sm:gap-[50px]">
 					<Link
 						href="/dashboard"
-						className="flex h-full items-center rounded-full bg-primary px-5 text-base font-medium text-white transition-colors hover:bg-primary sm:px-8 sm:text-2xl"
+						className="flex h-full items-center whitespace-nowrap rounded-full bg-primary px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-white transition-colors hover:bg-primary sm:px-8 sm:text-2xl"
 					>
 						{t('openDashboard')}
 					</Link>
 					<Link
 						href="/"
-						className="flex h-full items-center rounded-full border border-coral bg-background px-5 text-base font-medium text-black transition-colors hover:bg-coral hover:text-white sm:px-8 sm:text-2xl"
+						className="flex h-full items-center whitespace-nowrap rounded-full border border-coral bg-background px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-black transition-colors hover:bg-coral hover:text-background sm:px-8 sm:text-2xl"
 					>
 						{t('learnMore')}
 					</Link>
 				</div>
 			</div>
 
-			<div className="relative isolate mx-auto mt-10 w-[calc(100%-3rem)] max-w-300 lg:mt-[77px]">
+			<div className="relative isolate mx-auto mt-10 w-[calc(100%-2rem)] min-[400px]:w-[calc(100%-3rem)] max-w-300 lg:mt-[77px]">
 				<div className="max-h-[200px] overflow-hidden rounded-t-2xl border border-b-0 border-primary bg-background sm:max-h-[380px] lg:max-h-[491px]">
 					<Image
 						src="/hero-preview.png"

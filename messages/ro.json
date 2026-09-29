@@ -12,7 +12,10 @@
     "home": "Acasă",
     "features": "Funcții",
     "pricing": "Prețuri",
-    "support": "Suport"
+    "support": "Suport",
+    "openDashboard": "Deschide panoul",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
   },
   "Hero": {
     "title": "Noua eră a <highlight>educației</highlight>",

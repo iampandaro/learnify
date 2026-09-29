@@ -10,10 +10,15 @@ const OPTIONS: Record<Locale, { flag: string; label: string }> = {
 	ro: { flag: '🇷🇴', label: 'Română (RO)' },
 }
 
-// Same look as the navbar links
-const LINK = 'text-md font-medium text-gray-700 hover:text-gray-900'
+type Props = {
+	/**
+	 * `inline`: for use inside the mobile menu. Full-width row, and the language
+	 * list opens in the flow of the page instead of as a floating popover.
+	 */
+	inline?: boolean
+}
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ inline = false }: Props) {
 	const t = useTranslations('LocaleSwitcher')
 	const locale = useLocale() as Locale
 	const router = useRouter()
@@ -61,6 +66,18 @@ export default function LocaleSwitcher() {
 
 	const current = OPTIONS[locale]
 
+	const triggerClass = inline
+		? 'flex w-full items-center justify-between gap-2 rounded-lg px-4 py-3 text-lg font-medium text-gray-700 hover:bg-black/5'
+		: 'inline-flex items-center gap-2 text-base font-medium text-gray-700 hover:text-gray-900'
+
+	const listClass = inline
+		? 'mt-1 flex flex-col gap-1 pl-4'
+		: 'absolute right-0 top-full z-50 mt-3 w-max min-w-full rounded-xl border border-black/5 bg-white p-1.5 shadow-lg'
+
+	const itemClass = inline
+		? 'flex w-full items-center gap-2 rounded-lg px-4 py-3 text-left text-lg font-medium text-gray-700 hover:bg-black/5'
+		: 'flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-black/5 hover:text-gray-900'
+
 	return (
 		<div
 			ref={rootRef}
@@ -75,14 +92,16 @@ export default function LocaleSwitcher() {
 				aria-expanded={open}
 				aria-controls={menuId}
 				onClick={() => setOpen((o) => !o)}
-				className={`${LINK} inline-flex cursor-pointer items-center gap-2`}
+				className={`${triggerClass} cursor-pointer focus-visible:outline-2 focus-visible:outline-primary`}
 			>
-				<span aria-hidden>{current.flag}</span>
-				<span lang={locale}>{current.label}</span>
+				<span className="inline-flex items-center gap-2">
+					<span aria-hidden>{current.flag}</span>
+					<span lang={locale}>{current.label}</span>
+				</span>
 				<svg
 					aria-hidden
 					viewBox="0 0 24 24"
-					className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`}
+					className={`h-4 w-4 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
 					fill="none"
 					stroke="currentColor"
 					strokeWidth="2.5"
@@ -93,11 +112,7 @@ export default function LocaleSwitcher() {
 				</svg>
 			</button>
 
-			<ul
-				id={menuId}
-				hidden={!open}
-				className="absolute right-0 top-full z-50 mt-3 w-max min-w-full rounded-xl border border-black/5 bg-white p-1.5 shadow-lg"
-			>
+			<ul id={menuId} hidden={!open} className={listClass}>
 				{locales.map((loc) => (
 					<li key={loc}>
 						<button
@@ -105,7 +120,7 @@ export default function LocaleSwitcher() {
 							lang={loc}
 							aria-current={loc === locale ? 'true' : undefined}
 							onClick={() => select(loc)}
-							className={`${LINK} flex w-full cursor-pointer items-center gap-2 rounded-lg px-3 py-2 text-left hover:bg-black/5 focus-visible:bg-black/5 focus-visible:outline-none ${
+							className={`${itemClass} cursor-pointer focus-visible:outline-2 focus-visible:outline-primary ${
 								loc === locale ? 'bg-black/5' : ''
 							}`}
 						>
