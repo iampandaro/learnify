@@ -155,13 +155,13 @@ const Hero = () => {
 				<div className="relative z-10 flex h-full items-center justify-center gap-2 min-[400px]:gap-4 sm:gap-[50px]">
 					<Link
 						href="/dashboard"
-						className="flex h-full items-center whitespace-nowrap rounded-full bg-primary px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-white transition-colors hover:bg-primary/90 sm:px-8 sm:text-2xl"
+						className="flex h-full items-center whitespace-nowrap rounded-full bg-primary px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-white transition-colors hover:bg-primary sm:px-8 sm:text-2xl"
 					>
 						{t('openDashboard')}
 					</Link>
 					<Link
 						href={{ pathname: '/', hash: 'features' }}
-						className="flex h-full items-center whitespace-nowrap rounded-full border border-coral bg-background px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-black transition-colors hover:bg-coral/10 sm:px-8 sm:text-2xl"
+						className="flex h-full items-center whitespace-nowrap rounded-full border border-coral bg-background px-[clamp(0.75rem,4vw,1.25rem)] text-[clamp(0.75rem,3.8vw,1rem)] font-medium text-black transition-colors hover:bg-coral hover:text-background sm:px-8 sm:text-2xl"
 					>
 						{t('learnMore')}
 					</Link>
