@@ -1,0 +1,24 @@
+{
+  "Metadata": {
+    "title": "Learnify",
+    "description": "Learn something new every day"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language"
+  },
+  "Navbar": {
+    "label": "Main navigation",
+    "logoLabel": "Learnify home",
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "support": "Support"
+  },
+  "Hero": {
+    "title": "The new era of <highlight>education</highlight>",
+    "subtitle": "Learnify is a modern platform, designed to bring education in the modern era. With integrated AI that adapts to every learner.",
+    "openDashboard": "Open Dashboard",
+    "learnMore": "Learn More",
+    "previewAlt": "Preview of the Learnify platform"
+  }
+}

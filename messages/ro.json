@@ -1,0 +1,24 @@
+{
+  "Metadata": {
+    "title": "Learnify",
+    "description": "Învață ceva nou în fiecare zi"
+  },
+  "LocaleSwitcher": {
+    "label": "Schimbă limba"
+  },
+  "Navbar": {
+    "label": "Navigare principală",
+    "logoLabel": "Acasă Learnify",
+    "home": "Acasă",
+    "features": "Funcții",
+    "pricing": "Prețuri",
+    "support": "Suport"
+  },
+  "Hero": {
+    "title": "Noua eră a <highlight>educației</highlight>",
+    "subtitle": "Learnify este o platformă modernă, creată pentru a aduce educația în era modernă. Cu AI integrat, care se adaptează fiecărui elev.",
+    "openDashboard": "Deschide panoul",
+    "learnMore": "Află mai multe",
+    "previewAlt": "Previzualizare a platformei Learnify"
+  }
+}
