@@ -35,3 +35,12 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* In-page navigation: smooth scroll, and leave room for the fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 5rem;
+}

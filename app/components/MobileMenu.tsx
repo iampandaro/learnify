@@ -5,10 +5,10 @@ import { useEffect, useId, useState } from 'react'
 import { Link, usePathname } from '@/app/navigation'
 import LocaleSwitcher from './LocaleSwitcher'
 
-export type NavHref = '/' | '/features' | '/pricing' | '/support'
+export type NavHref = { pathname: '/'; hash: string }
 
 type Props = {
-	items: { href: NavHref; label: string }[]
+	items: { key: string; href: NavHref; label: string }[]
 	dashboardLabel: string
 	openLabel: string
 	closeLabel: string
@@ -82,9 +82,10 @@ export default function MobileMenu({ items, dashboardLabel, openLabel, closeLabe
 			>
 				<ul className="flex flex-col gap-1 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))]">
 					{items.map((item) => (
-						<li key={item.href}>
+						<li key={item.key}>
 							<Link
 								href={item.href}
+								onClick={() => setOpen(false)}
 								className="block rounded-lg px-4 py-3 text-lg font-medium text-gray-700 hover:bg-black/5 hover:text-gray-900"
 							>
 								{item.label}
@@ -97,6 +98,7 @@ export default function MobileMenu({ items, dashboardLabel, openLabel, closeLabe
 					<li className="mt-3">
 						<Link
 							href="/dashboard"
+							onClick={() => setOpen(false)}
 							className="flex items-center justify-center rounded-full bg-primary px-4 py-3 text-lg font-medium text-background transition duration-200 hover:brightness-110"
 						>
 							{dashboardLabel}

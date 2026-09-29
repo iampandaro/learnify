@@ -16,7 +16,7 @@ export default function Home({ params }: Props) {
 	setRequestLocale(locale)
 
 	return (
-		<main>
+		<main id="home">
 			<Hero />
 			<FeatureSections />
 			<PricingSection />

@@ -249,7 +249,7 @@ export function CtaSection() {
 				<p className={`${lead} max-w-xl`}>{t('text')}</p>
 				<div className="flex flex-wrap justify-center gap-3">
 					<Link href="/dashboard" className={btnPrimary}>{t('primary')}</Link>
-					<Link href="/features" className={btnGhost}>{t('secondary')}</Link>
+					<Link href={{ pathname: '/', hash: 'features' }} className={btnGhost}>{t('secondary')}</Link>
 				</div>
 			</div>
 		</section>
@@ -269,13 +269,13 @@ export function Footer() {
 				</div>
 				<nav aria-label={t('product')} className="flex flex-col gap-2">
 					<p className="text-sm font-semibold text-black">{t('product')}</p>
-					<Link href="/features" className={link}>{nav('features')}</Link>
-					<Link href="/pricing" className={link}>{nav('pricing')}</Link>
+					<Link href={{ pathname: '/', hash: 'features' }} className={link}>{nav('features')}</Link>
+					<Link href={{ pathname: '/', hash: 'pricing' }} className={link}>{nav('pricing')}</Link>
 					<Link href="/dashboard" className={link}>{nav('openDashboard')}</Link>
 				</nav>
 				<nav aria-label={t('help')} className="flex flex-col gap-2">
 					<p className="text-sm font-semibold text-black">{t('help')}</p>
-					<Link href="/support" className={link}>{nav('support')}</Link>
+					<Link href={{ pathname: '/', hash: 'support' }} className={link}>{nav('support')}</Link>
 				</nav>
 			</div>
 			<p className="mx-auto max-w-6xl border-t border-black/5 px-6 py-6 text-xs text-neutral-400">© {new Date().getFullYear()} Learnify. {t('rights')}</p>

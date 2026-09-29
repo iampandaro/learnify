@@ -50,7 +50,8 @@ export default function LocaleSwitcher({ inline = false }: Props) {
 	function select(next: Locale) {
 		setOpen(false)
 		startTransition(() => {
-			router.replace(pathname, { locale: next })
+			// scroll: false keeps the reader on the section they were viewing
+			router.replace(pathname, { locale: next, scroll: false })
 		})
 	}
 

@@ -5,15 +5,15 @@ import LocaleSwitcher from './LocaleSwitcher'
 import MobileMenu, { type NavHref } from './MobileMenu'
 
 const items: { key: 'home' | 'features' | 'pricing' | 'support'; href: NavHref }[] = [
-	{ key: 'home', href: '/' },
-	{ key: 'features', href: '/features' },
-	{ key: 'pricing', href: '/pricing' },
-	{ key: 'support', href: '/support' },
+	{ key: 'home', href: { pathname: '/', hash: 'home' } },
+	{ key: 'features', href: { pathname: '/', hash: 'features' } },
+	{ key: 'pricing', href: { pathname: '/', hash: 'pricing' } },
+	{ key: 'support', href: { pathname: '/', hash: 'support' } },
 ]
 
 const Navbar = () => {
 	const t = useTranslations('Navbar')
-	const links = items.map(({ key, href }) => ({ href, label: t(key) }))
+	const links = items.map(({ key, href }) => ({ key, href, label: t(key) }))
 
 	return (
 		<header className="fixed inset-x-0 top-0 z-30 w-full bg-background/80 pt-[env(safe-area-inset-top)] backdrop-blur-md lg:bg-transparent lg:backdrop-blur-none">
@@ -35,7 +35,7 @@ const Navbar = () => {
 				{/* Desktop / large tablet */}
 				<ul className="hidden items-center gap-4 lg:flex">
 					{links.map((item) => (
-						<li key={item.href}>
+						<li key={item.key}>
 							<Link
 								href={item.href}
 								className="text-base font-medium text-gray-700 hover:text-gray-900"
