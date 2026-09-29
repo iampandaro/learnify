@@ -23,5 +23,172 @@
     "openDashboard": "Open Dashboard",
     "learnMore": "Learn More",
     "previewAlt": "Preview of the Learnify platform"
+  },
+  "Landing": {
+    "palette": {
+      "title": "Your AI tutor, one shortcut away.",
+      "text": "Press ⌘K anywhere to ask a question, summarize a lesson, build a quiz or plan your week, without leaving what you're studying.",
+      "placeholder": "Ask a question or search lessons…",
+      "items": [
+        "Ask the AI tutor",
+        "Generate a practice quiz",
+        "Summarize this lesson",
+        "Turn notes into flashcards",
+        "Plan my study week"
+      ]
+    },
+    "adaptive": {
+      "title": "Lessons that adapt to how you learn.",
+      "text": "Learnify notices where you struggle and reshapes your path: extra practice here, a shortcut there.",
+      "items": [
+        "Algebra basics",
+        "Linear equations",
+        "Word problems",
+        "Quadratic functions"
+      ]
+    },
+    "integrations": {
+      "title": "Works with the tools you already use.",
+      "text": "Bring your classes, files and calendars into one place, so learning never starts from zero.",
+      "points": [
+        "Sync with Google Classroom and Moodle",
+        "Track streaks, goals and progress",
+        "Share reports with teachers and parents"
+      ],
+      "card": "Connected services",
+      "services": [
+        "Google Classroom",
+        "Moodle",
+        "Google Calendar"
+      ]
+    },
+    "plans": {
+      "title": "Turn goals into study plans.",
+      "text": "Tell Learnify what you're aiming for and when. It builds a plan and adjusts it as you go.",
+      "points": [
+        "Set an exam date or a target skill",
+        "Get a daily plan that fits your time",
+        "Reschedule in one click when life happens"
+      ],
+      "card": "This week",
+      "steps": [
+        "Review fractions",
+        "Practice quiz: ratios",
+        "Read chapter 4",
+        "Mock test"
+      ]
+    },
+    "speed": {
+      "title": "Not a heavy LMS. Made to be fast.",
+      "text": "Learnify opens instantly, works on any screen and keeps out of your way, so you spend time learning, not waiting.",
+      "features": [
+        {
+          "title": "Instant",
+          "text": "Loads in under a second"
+        },
+        {
+          "title": "Offline-ready",
+          "text": "Keep studying without a connection"
+        },
+        {
+          "title": "Every device",
+          "text": "Phone, tablet and computer"
+        },
+        {
+          "title": "Lightweight",
+          "text": "Small, quick, no clutter"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Your learning data stays yours.",
+      "text": "No ads and no selling your data. You decide what to share and with whom.",
+      "features": [
+        {
+          "title": "Private by default",
+          "text": "Only you see your progress until you share it."
+        },
+        {
+          "title": "Encrypted",
+          "text": "Your data is encrypted in transit and at rest."
+        },
+        {
+          "title": "Exportable",
+          "text": "Download your notes and results anytime."
+        },
+        {
+          "title": "Teacher-controlled",
+          "text": "Classroom settings stay with your school."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Two plans. No surprises.",
+      "text": "Start free. Upgrade when you want unlimited tutoring. Cancel anytime.",
+      "guarantee": "Pro includes a 14-day money-back guarantee.",
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "perks": [
+          "Core lessons and quizzes",
+          "5 AI tutor questions per day",
+          "Progress tracking"
+        ],
+        "cta": "Get started free"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$9.99",
+        "period": "per month",
+        "perks": [
+          "Unlimited AI tutor questions",
+          "Adaptive lessons and study plans",
+          "Offline mode on all devices"
+        ],
+        "cta": "Start free trial"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Is Learnify free?",
+          "a": "There is a free plan with core lessons. Paid plans add unlimited AI tutoring and offline mode."
+        },
+        {
+          "q": "Which devices does it work on?",
+          "a": "Any modern browser on phones, tablets and computers."
+        },
+        {
+          "q": "Can teachers use it with a class?",
+          "a": "Yes. Teachers can connect classes and follow progress with Google Classroom or Moodle."
+        },
+        {
+          "q": "Does the AI tutor see my private data?",
+          "a": "Only what you choose to share in a conversation. We never sell your data."
+        },
+        {
+          "q": "How do I cancel?",
+          "a": "Anytime from your dashboard settings. You keep access until the period ends."
+        },
+        {
+          "q": "Can I get a refund?",
+          "a": "Yes, within 14 days of purchase, no questions asked."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Give learning the platform it deserves.",
+      "text": "Try Learnify free, or open your dashboard today.",
+      "primary": "Open Dashboard",
+      "secondary": "Learn More"
+    },
+    "footer": {
+      "tagline": "A modern learning platform with an AI tutor that adapts to you.",
+      "product": "Product",
+      "help": "Support",
+      "rights": "All rights reserved."
+    }
   }
 }

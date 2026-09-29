@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { use } from "react"
 import { locales } from "@/app/config"
 import Hero from "@/app/components/Hero"
+import { CtaSection, FaqSection, FeatureSections, Footer, PricingSection } from "@/app/components/Sections"
 
 type Props = {
 	params: Promise<{ locale: string }>
@@ -17,7 +18,11 @@ export default function Home({ params }: Props) {
 	return (
 		<main>
 			<Hero />
-			<div className="h-screen"></div>
+			<FeatureSections />
+			<PricingSection />
+			<FaqSection />
+			<CtaSection />
+			<Footer />
 		</main>
 	)
 }

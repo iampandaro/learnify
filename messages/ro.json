@@ -23,5 +23,172 @@
     "openDashboard": "Deschide panoul",
     "learnMore": "Află mai multe",
     "previewAlt": "Previzualizare a platformei Learnify"
+  },
+  "Landing": {
+    "palette": {
+      "title": "Tutorele tău AI, la o scurtătură distanță.",
+      "text": "Apasă ⌘K oriunde pentru a pune o întrebare, a rezuma o lecție, a crea un test sau a-ți planifica săptămâna, fără să părăsești ce înveți.",
+      "placeholder": "Pune o întrebare sau caută lecții…",
+      "items": [
+        "Întreabă tutorele AI",
+        "Generează un test de exersare",
+        "Rezumă această lecție",
+        "Transformă notițele în flashcarduri",
+        "Planifică-mi săptămâna de studiu"
+      ]
+    },
+    "adaptive": {
+      "title": "Lecții care se adaptează felului tău de a învăța.",
+      "text": "Learnify observă unde întâmpini dificultăți și îți modelează parcursul: mai multă exersare aici, o scurtătură dincolo.",
+      "items": [
+        "Bazele algebrei",
+        "Ecuații liniare",
+        "Probleme cu text",
+        "Funcții de gradul II"
+      ]
+    },
+    "integrations": {
+      "title": "Funcționează cu instrumentele pe care le folosești deja.",
+      "text": "Adu clasele, fișierele și calendarele într-un singur loc, ca să nu o iei niciodată de la zero.",
+      "points": [
+        "Sincronizare cu Google Classroom și Moodle",
+        "Urmărește serii, obiective și progres",
+        "Trimite rapoarte profesorilor și părinților"
+      ],
+      "card": "Servicii conectate",
+      "services": [
+        "Google Classroom",
+        "Moodle",
+        "Google Calendar"
+      ]
+    },
+    "plans": {
+      "title": "Transformă obiectivele în planuri de studiu.",
+      "text": "Spune-i lui Learnify ce vrei să atingi și până când. Creează un plan și îl ajustează pe parcurs.",
+      "points": [
+        "Stabilește o dată de examen sau o abilitate țintă",
+        "Primești un plan zilnic potrivit timpului tău",
+        "Reprogramezi dintr-un clic când apar schimbări"
+      ],
+      "card": "Săptămâna aceasta",
+      "steps": [
+        "Recapitulare fracții",
+        "Test de exersare: rapoarte",
+        "Citește capitolul 4",
+        "Test simulat"
+      ]
+    },
+    "speed": {
+      "title": "Nu un LMS greoi. Făcut să fie rapid.",
+      "text": "Learnify se deschide instant, merge pe orice ecran și nu te încurcă, ca să petreci timpul învățând, nu așteptând.",
+      "features": [
+        {
+          "title": "Instant",
+          "text": "Se încarcă în sub o secundă"
+        },
+        {
+          "title": "Funcționează offline",
+          "text": "Continuă să înveți fără conexiune"
+        },
+        {
+          "title": "Pe orice dispozitiv",
+          "text": "Telefon, tabletă și computer"
+        },
+        {
+          "title": "Ușor",
+          "text": "Mic, rapid, fără aglomerație"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Datele tale de învățare rămân ale tale.",
+      "text": "Fără reclame și fără vânzarea datelor. Tu decizi ce partajezi și cu cine.",
+      "features": [
+        {
+          "title": "Privat implicit",
+          "text": "Doar tu îți vezi progresul până îl partajezi."
+        },
+        {
+          "title": "Criptat",
+          "text": "Datele sunt criptate în tranzit și în repaus."
+        },
+        {
+          "title": "Exportabil",
+          "text": "Descarcă-ți notițele și rezultatele oricând."
+        },
+        {
+          "title": "Controlat de profesor",
+          "text": "Setările clasei rămân la școala ta."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Două planuri. Fără surprize.",
+      "text": "Începe gratuit. Treci la Pro când vrei tutore nelimitat. Anulezi oricând.",
+      "guarantee": "Pro include garanție de rambursare 14 zile.",
+      "free": {
+        "name": "Gratuit",
+        "price": "$0",
+        "period": "pentru totdeauna",
+        "perks": [
+          "Lecții și teste de bază",
+          "5 întrebări pe zi către tutorele AI",
+          "Urmărirea progresului"
+        ],
+        "cta": "Începe gratuit"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$9.99",
+        "period": "pe lună",
+        "perks": [
+          "Întrebări nelimitate către tutorele AI",
+          "Lecții adaptive și planuri de studiu",
+          "Mod offline pe toate dispozitivele"
+        ],
+        "cta": "Începe perioada de probă"
+      }
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Este Learnify gratuit?",
+          "a": "Există un plan gratuit cu lecțiile de bază. Planurile plătite adaugă tutor AI nelimitat și mod offline."
+        },
+        {
+          "q": "Pe ce dispozitive funcționează?",
+          "a": "În orice browser modern, pe telefoane, tablete și computere."
+        },
+        {
+          "q": "Pot folosi profesorii aplicația la clasă?",
+          "a": "Da. Profesorii pot conecta clasele și urmări progresul prin Google Classroom sau Moodle."
+        },
+        {
+          "q": "Vede tutorele AI datele mele private?",
+          "a": "Doar ce alegi să partajezi într-o conversație. Nu vindem niciodată datele tale."
+        },
+        {
+          "q": "Cum anulez?",
+          "a": "Oricând, din setările panoului. Păstrezi accesul până la sfârșitul perioadei."
+        },
+        {
+          "q": "Pot primi banii înapoi?",
+          "a": "Da, în 14 zile de la achiziție, fără întrebări."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Oferă învățării platforma pe care o merită.",
+      "text": "Încearcă Learnify gratuit sau deschide panoul chiar azi.",
+      "primary": "Deschide panoul",
+      "secondary": "Află mai multe"
+    },
+    "footer": {
+      "tagline": "O platformă modernă de învățare, cu un tutor AI care se adaptează ție.",
+      "product": "Produs",
+      "help": "Suport",
+      "rights": "Toate drepturile rezervate."
+    }
   }
 }
